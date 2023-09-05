@@ -1,0 +1,4 @@
+---
+ansible_user: adminpvuddagi
+ansible_password: C@$Hm0n3y123
+ansible_network_os: junos

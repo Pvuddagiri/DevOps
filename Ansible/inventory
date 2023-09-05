@@ -1,0 +1,14 @@
+
+
+
+[Cisco]
+10.45.200.11
+
+[Juniper]
+10.45.188.2
+
+[Network:children]
+Cisco
+Juniper
+
+
