@@ -1,0 +1,17 @@
+---
+  - name: SHOW SNMP CONFIGURATION OF CISCO DEVICES
+    hosts: Cisco
+    connection: network_cli
+    gather_facts: no
+
+    tasks:
+      - name: SHOW VERSION AND SHOW SNMP
+        ios_command:
+          commands:
+            - "show version"
+            - "show run | s snmp"
+        register: output
+
+      - name: VIEW COMMAND OUTPUT
+        debug:
+          var: output["stdout"][0]
