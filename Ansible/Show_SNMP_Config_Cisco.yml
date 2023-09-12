@@ -14,4 +14,4 @@
 
       - name: VIEW COMMAND OUTPUT
         debug:
-          var: output["stdout"][0]
+          var: output["stdout"][1]
