@@ -1,0 +1,14 @@
+---
+  - name: GATHER FACTS FROM CISCO DEVICES
+    hosts: Cisco
+    connection: network_cli
+    gather_facts: no
+
+    tasks:
+      - name: GGATHER ALL FACTS
+        ios_facts:
+        register: output
+
+      - name: VIEW ONLY VERSION INFO
+        debug:
+          var: ansible_net_version

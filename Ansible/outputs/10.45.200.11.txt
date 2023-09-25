@@ -1,0 +1,7 @@
+snmp-server view EXCLUDE_OIDS iso included
+snmp-server view EXCLUDE_OIDS ciscoEntitySensorMIB excluded
+snmp-server view EXCLUDE_OIDS pethMainPseConsumptionPower excluded
+snmp-server community dida^uwh5r5 view EXCLUDE_OIDS RO 99
+snmp-server location Bangalore Office
+snmp-server contact it-network@synaptics.com
+snmp mib flash cache

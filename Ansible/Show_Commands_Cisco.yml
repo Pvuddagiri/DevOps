@@ -14,9 +14,4 @@
 
       - name: VIEW COMMAND OUTPUT
         debug:
-          var: output['stdout'][1]
-
-      - name: STORE DATA IN A FILE
-        copy:
-              content: "{{ output['stdout'][1] }}"
-              dest: ./outputs/{{ inventory_hostname }}.txt
+          var: output["stdout"][1]
