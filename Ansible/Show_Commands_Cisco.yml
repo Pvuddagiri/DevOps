@@ -1,17 +1,17 @@
 ---
-  - name: SHOW SNMP CONFIGURATION OF CISCO DEVICES
+  - name: CISCO SHOW COMMANDS
     hosts: Cisco
     connection: network_cli
     gather_facts: no
 
     tasks:
-      - name: SHOW VERSION AND SHOW SNMP
+
+      - name: SHOW IP INTERFACE BRIEF
         ios_command:
           commands:
-            - show version
-            - show run | s snmp
+            - "show ip int brief | ex un"
         register: output
 
-      - name: VIEW COMMAND OUTPUT
+      - name: Gather output
         debug:
-          var: output["stdout"][1]
+          var: output['stdout']

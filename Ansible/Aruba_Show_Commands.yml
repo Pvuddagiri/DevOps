@@ -1,0 +1,42 @@
+---
+  - name: ARUBA TEST
+    hosts: Aruba
+    connection: network_cli
+    gather_facts: no
+
+    tasks:
+
+      - name: Disable Encryption
+        aruba_config:
+          commands: ['configure terminal',
+            'encrypt disable',
+            'end']
+
+      - name: Current Password 
+        aruba_command:
+          commands:
+            - 'show wlan ssid-profile guest | include Passphrase'
+        register: Cleartext_Password
+
+      - name: SHOW OUTPUT
+        debug:
+          var: Cleartext_Password['stdout']
+
+      - name: Changing Guest WiFi Password
+        aruba_config:
+          commands: ['configure terminal',
+            'wlan ssid-profile Guest',
+            'wpa-passphrase 2021-9897',
+            'write memory',
+            'end']
+
+      - name: Updated Password 
+        aruba_command:
+          commands:
+            - 'show wlan ssid-profile guest | include Passphrase'
+        register: New_Password
+
+      - name: SHOW OUTPUT
+        debug:
+          var: New_Password['stdout']
+        

@@ -1,0 +1,4 @@
+---
+ansible_user: admin
+ansible_password: DryjvtUDAms7D5nW@SJC
+ansible_network_os: aruba
