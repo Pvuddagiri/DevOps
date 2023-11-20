@@ -13,5 +13,30 @@ Juniper
 
 
 [Aruba]
-10.45.200.109
-10.46.200.109
+
+; blr-wlc01	    ansible_host=10.45.200.108
+; blr2-wlc01	ansible_host=10.46.200.108
+; SHA2-WLC1	    ansible_host=10.70.200.108
+; She-WLC1	    ansible_host=10.18.4.108
+; hkg2-wlc01	ansible_host=10.244.200.108
+; che-wlc01	    ansible_host=10.47.200.108
+; bei2-wlc01	ansible_host=10.43.200.108
+; nak-wlc01		ansible_host=10.42.200.108
+; cbg-wlc01		ansible_host=10.250.200.108
+; ktw-wlc01		ansible_host=10.249.200.108
+; tpe6-wlc01	ansible_host=10.114.200.108
+; hsi-wlc01		ansible_host=10.31.200.108
+
+blr-wlc02	    ansible_host=10.45.200.109
+blr2-wlc02	    ansible_host=10.46.200.109
+SHA2-WLC2	    ansible_host=10.70.200.109
+SHA2-WLC2	    ansible_host=10.70.200.109
+She-WLC2	    ansible_host=10.18.4.109
+hkg2-wlc02  	ansible_host=10.244.200.109
+che-wlc02	    ansible_host=10.47.200.109
+bei2-wlc02	    ansible_host=10.43.200.109
+nak-wlc02	    ansible_host=10.42.200.109
+cbg-wlc02	    ansible_host=10.250.200.109
+ktw-wlc02	    ansible_host=10.249.200.109
+tpe6-wlc02  	ansible_host=10.114.200.109
+hsi-wlc02   	ansible_host=10.31.200.109
